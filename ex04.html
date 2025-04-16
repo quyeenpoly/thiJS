@@ -20,8 +20,15 @@
           return "Invalid";
         }
 
-        uniqueNumbers.sort((a, b) => b - a);
-        return uniqueNumbers[1];
+        const uniqueNumbers = arr.filter(
+          (item, index) => arr.indexOf(item) === index
+        );
+        uniqueNumbers.sort((a, b) => a - b);
+        if (uniqueNumbers.length < 2) {
+          return null;
+        }
+        const secondLargest = uniqueNumbers[uniqueNumbers.length - 2];
+        return secondLargest;
       };
       console.log(findSecondLargestNumber(arr1));
     </script>
