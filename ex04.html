@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bài 4 (2 điểm): Tìm số lớn thứ 2 trong mảng
+      // Hàm findSecondLargestNumber(arr) nhận vào một mảng
+      // số nguyên và trả về số lớn thứ 2 trong mảng. (1đ)
+
+      // Nếu arr không có số lớn thứ 2 thì trả về null. (0.5đ)
+      // Nếu arr không phải là mảng hoặc mảng rỗng thì trả về Invalid,
+      // (Mặc định rằng mảng không có kiểu dữ liệu nào khác ngoài số nguyên). (0.5đ)
+      const arr1 = [1, 2, 3, 4, 5, 33, 44, 99];
+      const findSecondLargestNumber = (arr) => {
+        if (!Array.isArray(arr) || arr.length === 0) {
+          return "Invalid";
+        }
+
+        uniqueNumbers.sort((a, b) => b - a);
+        return uniqueNumbers[1];
+      };
+      console.log(findSecondLargestNumber(arr1));
+    </script>
+  </body>
+</html>
